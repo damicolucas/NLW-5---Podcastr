@@ -7,16 +7,17 @@
 
 ## ⚛ Technologies
 
-- [React Native](https://reactnative.dev/)
-- [Expo](https://expo.io/)
+- [React JS](https://reactjs.org)
+- [Next JS](https://nextjs.org)
 - [TypeScript](https://www.typescriptlang.org/)
+- [Sass](https://sass-lang.com)
 
 ## 🚀 Getting started
 
 Clone the project and access the folder
 
 ```bash
-$ git clone git@github.com:damicolucas/NLW-5_PlantManager.git && cd NLW_5-PlantManager
+$ git clone git@github.com:damicolucas/NLW-5_Podcastr.git && cd NLW-5_Podcastr
 ```
 
 Follow the steps below
@@ -26,12 +27,13 @@ Follow the steps below
 $ yarn install
 
 # Start the project
-$ expo start
+$ yarn dev
+
+# Open a new terminal and run this line to start the json server
+$ yarn server
 ```
 
 ## 💻 Project
-
-PlantManager is a app developed to always remember you when your plants need water
 
 This project was developed during the **[Next Level Week](https://nextlevelweek.com/)**, presented by **[@Rocketseat](https://github.com/Rocketseat)** during April, 2021.
 
@@ -41,4 +43,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE.md) fi
 
 ---
 
-Made by [damicolucas](https://github.com/damicolucas) 👋
+Made by [damicolucas](https://github.com/damicolucas) based on 👋 **[Rocketseat](https://github.com/Rocketseat)**
