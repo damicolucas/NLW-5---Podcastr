@@ -68,14 +68,13 @@ export default function Player() {
 
       {episode ? (
         <div className={styles.currentEpisode}>
-          <Image
-            width={592}
-            height={592}
-            src={episode.thumbnail}
-            objectFit="cover"
-          />
-          <strong>{episode.title}</strong>
-          <span>{episode.members}</span>
+          <div className={styles.EpisodeImageContainer}>
+            <Image src={episode.thumbnail} layout="fill" />
+          </div>
+          <div className={styles.titleWrapper}>
+            <strong>{episode.title}</strong>
+            <span>{episode.members}</span>
+          </div>
         </div>
       ) : (
         <div className={styles.emptyPlayer}>
@@ -84,18 +83,30 @@ export default function Player() {
       )}
 
       <footer className={!episode ? styles.empty : ""}>
+        {episode && (
+          <div className={styles.titleWrapperMobile}>
+            <header>
+              <img src="/playing.svg" alt="Tocando agora" />
+              <strong>Tocando agora </strong>
+            </header>
+            <strong>{episode.title}</strong>
+            <span>{episode.members}</span>
+          </div>
+        )}
         <div className={styles.progress}>
           <span>{convertDurationTotimeString(progress)}</span>
           <div className={styles.slider}>
             {episode ? (
-              <Slider
-                max={episode.duration}
-                value={progress}
-                onChange={handleSeek}
-                trackStyle={{ backgroundColor: "#04d361" }}
-                railStyle={{ backgroundColor: "#9f75ff" }}
-                handleStyle={{ borderColor: "#04d361", borderWidth: 4 }}
-              />
+              <>
+                <Slider
+                  max={episode.duration}
+                  value={progress}
+                  onChange={handleSeek}
+                  trackStyle={{ backgroundColor: "#04d361" }}
+                  railStyle={{ backgroundColor: "#9f75ff" }}
+                  handleStyle={{ borderColor: "#04d361", borderWidth: 4 }}
+                />
+              </>
             ) : (
               <div className={styles.emptySlider} />
             )}

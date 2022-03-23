@@ -16,9 +16,12 @@ export default function Header() {
           <img src="/logo.svg" alt="logo" />
         </a>
       </Link>
-      <p>O melhor para você ouvir, sempre</p>
+      <hr />
+      <div>
+        <p>O melhor para você ouvir, sempre</p>
 
-      <span>{currentDate}</span>
+        <span>{currentDate}</span>
+      </div>
     </header>
   );
 }
